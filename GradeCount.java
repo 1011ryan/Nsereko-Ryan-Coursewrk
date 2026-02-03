@@ -13,11 +13,11 @@ public class GradeCount {
         int[] gradeCount = new int[10]; // index 1–9 used for grades
 
         int student = 1;
-        while (student <= 5) {   // loop runs 5 times
+        while (student <= 5) {   
             System.out.print("Enter score for student " + student + ": ");
             int score = input.nextInt();
-            //grading logic here.
-            student++;//move to next student
+            
+            student++;
 
             int grade;
             String remark;
@@ -42,16 +42,16 @@ public class GradeCount {
                 grade = 9; remark = "F";
             }
 
-            // Count grade occurrence
+        
             gradeCount[grade]++;
 
-            // Display individual result
+            
             System.out.println("Student " + student + " → Score: " + score + ", Grade: " + grade + ", Remark: " + remark);
 
-            student++; // move to next student
+            student++; 
         }
 
-        // Display summary
+        
         System.out.println("\n--- Summary of Grades ---");
         for (int i = 1; i <= 9; i++) {
             System.out.println("Grade " + i + ": " + gradeCount[i] + " student(s)");
@@ -60,3 +60,4 @@ public class GradeCount {
         input.close();
     }
 }
+
