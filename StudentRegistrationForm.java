@@ -30,19 +30,19 @@ public class StudentRegistrationForm extends JFrame {
 
         setLayout(new BorderLayout());
 
-        // Title
+        
         JLabel title = new JLabel("New Student Registration Form", JLabel.CENTER);
         title.setFont(new Font("Arial", Font.BOLD, 22));
         add(title, BorderLayout.NORTH);
 
-        // ===== LEFT PANEL =====
+        
         JPanel leftPanel = new JPanel(new GridBagLayout());
         leftPanel.setBorder(BorderFactory.createEmptyBorder(20, 30, 20, 30));
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(6, 6, 6, 6);
         gbc.anchor = GridBagConstraints.WEST;
 
-        // WIDE TEXTFIELDS
+        
         txtFirstName = new JTextField(30);
         txtLastName = new JTextField(30);
         txtEmail = new JTextField(30);
@@ -58,7 +58,7 @@ public class StudentRegistrationForm extends JFrame {
         addRow(leftPanel, gbc, y++, "Password", txtPassword);
         addRow(leftPanel, gbc, y++, "Confirm Password", txtConfirmPassword);
 
-        // DOB
+        
         gbc.gridx = 0; gbc.gridy = y;
         leftPanel.add(new JLabel("Date of Birth"), gbc);
 
@@ -89,7 +89,7 @@ public class StudentRegistrationForm extends JFrame {
         leftPanel.add(dobPanel, gbc);
         y++;
 
-        // Gender
+        
         gbc.gridx = 0; gbc.gridy = y;
         leftPanel.add(new JLabel("Gender"), gbc);
 
@@ -108,7 +108,7 @@ public class StudentRegistrationForm extends JFrame {
         leftPanel.add(genderPanel, gbc);
         y++;
 
-        // Department
+        
         gbc.gridx = 0; gbc.gridy = y;
         leftPanel.add(new JLabel("Department"), gbc);
 
@@ -136,7 +136,7 @@ public class StudentRegistrationForm extends JFrame {
         leftPanel.add(deptPanel, gbc);
         y++;
 
-        // Buttons
+        
         btnSubmit = new JButton("Submit");
         btnCancel = new JButton("Cancel");
 
@@ -147,7 +147,7 @@ public class StudentRegistrationForm extends JFrame {
         gbc.gridx = 1; gbc.gridy = y;
         leftPanel.add(btnPanel, gbc);
 
-        // ===== RIGHT PANEL =====
+        
         JPanel rightPanel = new JPanel(new BorderLayout());
         rightPanel.setBorder(BorderFactory.createEmptyBorder(20, 10, 20, 20));
 
@@ -163,7 +163,7 @@ public class StudentRegistrationForm extends JFrame {
         add(leftPanel, BorderLayout.CENTER);
         add(rightPanel, BorderLayout.EAST);
 
-        // Sample action
+        
         btnSubmit.addActionListener(e -> {
             outputArea.setText(
                 txtFirstName.getText() + " " +
