@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class SkMotorsAuction {
     public static void main(String[] args) {
-        // Vehicle details
+        
         try (java.util.Scanner input = new Scanner(System.in)) {
             // Vehicle details
             System.out.print("Enter vehicle registration number: ");
@@ -15,7 +15,7 @@ public class SkMotorsAuction {
             
             System.out.print("Enter vehicle cost: ");
             double vehicleCost = input.nextDouble();
-            input.nextLine(); // clear newline
+            input.nextLine(); 
             
             System.out.print("Enter balance left on the vehicle: ");
             double balance = input.nextDouble();
@@ -29,7 +29,7 @@ public class SkMotorsAuction {
             double expenses = input.nextDouble();
             input.nextLine();
             
-            // Auction: 3 bidders
+            // bidders
             double highestBid = 0;
             String highestBidder = "";
             
@@ -39,7 +39,7 @@ public class SkMotorsAuction {
                 
                 System.out.print("Enter bidder " + i + " price: ");
                 double bidPrice = input.nextDouble();
-                input.nextLine(); // clear newline
+                input.nextLine(); 
                 
                 if (bidPrice > highestBid) {
                     highestBid = bidPrice;
@@ -47,11 +47,11 @@ public class SkMotorsAuction {
                 }
             }
             
-            // Display winning bidder
+            
             System.out.println("\nVehicle " + regNo + " sold to " + highestBidder + " at price: " + highestBid);
             
-            // Compute profit/loss
-            double totalCost = vehicleCost + expenses - deposits; // net cost after deposits
+            
+            double totalCost = vehicleCost + expenses - deposits; 
             double profitOrLoss = highestBid - (totalCost + balance);
             
             System.out.println("Vehicle Cost: " + vehicleCost);
